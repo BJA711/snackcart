@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="catNamkeenBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="100%" stop-color="#F7EFE3" />
+    </radialGradient>
+    <filter id="namkeenSh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#78350F" flood-opacity="0.2" />
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#catNamkeenBg)" />
+
+  <!-- Shadow -->
+  <ellipse cx="300" cy="330" rx="200" ry="35" fill="#78350F" opacity="0.12" />
+
+  <!-- Artisanal Bowl -->
+  <path d="M 140 190 C 140 310, 460 310, 460 190 Z" fill="#C04F22" filter="url(#namkeenSh)" />
+  <ellipse cx="300" cy="190" rx="160" ry="40" fill="#D96B35" />
+  <ellipse cx="300" cy="190" rx="150" ry="34" fill="#9D3D1D" />
+
+  <!-- Crispy Sev & Savory Mix -->
+  <g fill="none" stroke-linecap="round">
+    <g stroke="#D97706" stroke-width="4">
+      <path d="M 180 180 Q 230 120 280 140 T 380 140" />
+      <path d="M 210 160 Q 260 100 310 120 T 410 150" />
+      <path d="M 240 190 Q 300 110 360 130 T 420 170" />
+      <path d="M 190 170 Q 270 110 330 140 T 390 160" />
+    </g>
+    <g stroke="#F59E0B" stroke-width="3.5">
+      <path d="M 190 175 Q 240 115 290 135 T 390 130" />
+      <path d="M 220 150 Q 280 95 330 120 T 400 160" />
+      <path d="M 250 180 Q 310 105 350 135 T 410 180" />
+    </g>
+    <g stroke="#FDE68A" stroke-width="3">
+      <path d="M 240 135 Q 290 85 340 110 T 375 145" />
+      <path d="M 260 125 Q 300 75 350 105 T 365 140" />
+    </g>
+  </g>
+
+  <!-- Fried Peanuts & Curry leaves in mixture -->
+  <ellipse cx="270" cy="140" rx="12" ry="7" fill="#B45309" transform="rotate(-20 270 140)" />
+  <ellipse cx="330" cy="130" rx="11" ry="6.5" fill="#92400E" transform="rotate(35 330 130)" />
+  <ellipse cx="230" cy="165" rx="10" ry="6" fill="#B45309" transform="rotate(15 230 165)" />
+  <path d="M 290 115 Q 315 110 320 125 Q 310 135 290 115 Z" fill="#15803D" />
+
+  <!-- Collection Title -->
+  <rect x="180" y="340" width="240" height="32" rx="16" fill="#78350F" />
+  <text x="300" y="361" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FEF3C7" text-anchor="middle" letter-spacing="1">TRADITIONAL NAMKEEN</text>
+</svg>
+

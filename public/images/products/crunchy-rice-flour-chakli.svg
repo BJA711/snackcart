@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgChakli" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="100%" stop-color="#F2EFE9" />
+    </radialGradient>
+    <radialGradient id="chakliGold" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </radialGradient>
+    <filter id="chakliShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#78350F" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="500" height="500" fill="url(#bgChakli)" />
+
+  <!-- Shadow below chaklis -->
+  <ellipse cx="250" cy="370" rx="180" ry="35" fill="#78350F" opacity="0.12" />
+
+  <!-- Back Chakli 1 (Left) -->
+  <g transform="translate(140, 200) rotate(-15)" filter="url(#chakliShadow)">
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#B45309" stroke-width="14" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#D97706" stroke-width="14" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#F59E0B" stroke-width="14" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#D97706" stroke-width="12" stroke-dasharray="5,3" />
+    <circle cx="0" cy="0" r="5" fill="#B45309" />
+  </g>
+
+  <!-- Back Chakli 2 (Right) -->
+  <g transform="translate(340, 210) rotate(25)" filter="url(#chakliShadow)">
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#B45309" stroke-width="14" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#D97706" stroke-width="14" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#F59E0B" stroke-width="14" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#D97706" stroke-width="12" stroke-dasharray="5,3" />
+    <circle cx="0" cy="0" r="5" fill="#B45309" />
+  </g>
+
+  <!-- Front Central Crisp Chakli -->
+  <g transform="translate(250, 260)" filter="url(#chakliShadow)">
+    <!-- Concentric Spiked Spiral Rings representing star-nozzle extrusion -->
+    <!-- Ring 4 (Outer) -->
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#92400E" stroke-width="18" stroke-dasharray="7,5" />
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#D97706" stroke-width="12" stroke-dasharray="7,5" />
+
+    <!-- Ring 3 -->
+    <circle cx="0" cy="0" r="68" fill="none" stroke="#B45309" stroke-width="18" stroke-dasharray="7,5" />
+    <circle cx="0" cy="0" r="68" fill="none" stroke="#F59E0B" stroke-width="12" stroke-dasharray="7,5" />
+
+    <!-- Ring 2 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#D97706" stroke-width="18" stroke-dasharray="6,4" />
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#FBBF24" stroke-width="12" stroke-dasharray="6,4" />
+
+    <!-- Ring 1 (Inner loop) -->
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#B45309" stroke-width="16" stroke-dasharray="5,3" />
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#FDE68A" stroke-width="10" stroke-dasharray="5,3" />
+
+    <!-- Core Center -->
+    <circle cx="0" cy="0" r="7" fill="#78350F" />
+
+    <!-- White Sesame Seeds (Til) sprinkled on rings -->
+    <g fill="#FFFFFF" opacity="0.95">
+      <ellipse cx="-65" cy="-45" rx="3.5" ry="2" transform="rotate(-30 -65 -45)" />
+      <ellipse cx="65" cy="-50" rx="3.5" ry="2" transform="rotate(40 65 -50)" />
+      <ellipse cx="-75" cy="30" rx="3.5" ry="2" transform="rotate(20 -75 30)" />
+      <ellipse cx="70" cy="45" rx="3.5" ry="2" transform="rotate(-40 70 45)" />
+      <ellipse cx="-35" cy="-25" rx="3" ry="1.8" transform="rotate(15 -35 -25)" />
+      <ellipse cx="38" cy="-20" rx="3" ry="1.8" transform="rotate(-25 38 -20)" />
+      <ellipse cx="-30" cy="35" rx="3" ry="1.8" transform="rotate(45 -30 35)" />
+      <ellipse cx="32" cy="30" rx="3" ry="1.8" transform="rotate(-15 32 30)" />
+      <ellipse cx="0" cy="-68" rx="3.5" ry="2" />
+      <ellipse cx="0" cy="68" rx="3.5" ry="2" />
+    </g>
+
+    <!-- Cumin Seeds (Jeera) -->
+    <g fill="#451A03" opacity="0.85">
+      <ellipse cx="-48" cy="-50" rx="4" ry="1.5" transform="rotate(-45 -48 -50)" />
+      <ellipse cx="50" cy="-35" rx="4" ry="1.5" transform="rotate(30 50 -35)" />
+      <ellipse cx="-55" cy="40" rx="4" ry="1.5" transform="rotate(-20 -55 40)" />
+      <ellipse cx="52" cy="55" rx="4" ry="1.5" transform="rotate(50 52 55)" />
+      <ellipse cx="15" cy="-25" rx="3.5" ry="1.3" transform="rotate(-10 15 -25)" />
+    </g>
+  </g>
+
+  <!-- Label Badge -->
+  <rect x="140" y="420" width="220" height="34" rx="17" fill="#78350F" />
+  <text x="250" y="442" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FEF3C7" text-anchor="middle" letter-spacing="1">CRUNCHY RICE CHAKLI</text>
+</svg>
+

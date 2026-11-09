@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { SafeImage } from "@/components/ui/SafeImage";
 import { useCart } from "@/context/CartContext";
 import { formatPaiseToRupees } from "@/lib/formatters";
 import { Tag, X, Check, Truck, ArrowRight, AlertCircle } from "lucide-react";
@@ -113,6 +114,36 @@ export function CartSummary({ showCheckoutButton = true }: CartSummaryProps) {
       <h2 className="text-base font-bold text-stone-900 border-b border-stone-100 pb-3">
         Order Summary
       </h2>
+
+      {/* Items Preview with Thumbnails */}
+      {items.length > 0 && (
+        <div className="space-y-2 border-b border-stone-100 pb-4">
+          <p className="text-xs font-semibold text-stone-700">Items in Order ({items.length})</p>
+          <div className="max-h-48 overflow-y-auto divide-y divide-stone-100 pr-1">
+            {items.map(({ product_id, product, quantity }) => (
+              <div key={product_id} className="py-2 flex items-center gap-3">
+                <div className="relative w-10 h-10 bg-stone-100 rounded overflow-hidden shrink-0 border border-stone-200">
+                  <SafeImage
+                    src={product.image_url || "/images/products/fallback-snack.svg"}
+                    alt={product.name}
+                    fill
+                    sizes="40px"
+                    className="object-cover"
+                    fallbackSrc="/images/products/fallback-snack.svg"
+                  />
+                </div>
+                <div className="flex-grow min-w-0 text-xs">
+                  <p className="font-medium text-stone-900 truncate">{product.name}</p>
+                  <p className="text-stone-500">Qty: {quantity} &times; {formatPaiseToRupees(product.price_in_paise)}</p>
+                </div>
+                <div className="text-xs font-semibold text-stone-900 shrink-0">
+                  {formatPaiseToRupees(product.price_in_paise * quantity)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Free Delivery Tracker */}
       <div className="bg-amber-50/70 border border-amber-200/80 rounded-md p-3.5 space-y-2">
@@ -263,3 +294,4 @@ export function CartSummary({ showCheckoutButton = true }: CartSummaryProps) {
     </div>
   );
 }
+

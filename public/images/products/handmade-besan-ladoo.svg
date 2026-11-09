@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgLadoo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="100%" stop-color="#FAF0E1" />
+    </radialGradient>
+    <radialGradient id="ladooGrad1" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="40%" stop-color="#F59E0B" />
+      <stop offset="85%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </radialGradient>
+    <radialGradient id="ladooGrad2" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="45%" stop-color="#F59E0B" />
+      <stop offset="85%" stop-color="#B45309" />
+      <stop offset="100%" stop-color="#78350F" />
+    </radialGradient>
+    <filter id="ladooShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#78350F" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect width="500" height="500" fill="url(#bgLadoo)" />
+
+  <!-- Brass Thali / Plate -->
+  <ellipse cx="250" cy="350" rx="190" ry="45" fill="#78350F" opacity="0.15" />
+  <ellipse cx="250" cy="290" rx="180" ry="85" fill="#D97706" />
+  <ellipse cx="250" cy="285" rx="170" ry="78" fill="#F59E0B" />
+  <ellipse cx="250" cy="280" rx="155" ry="70" fill="#FEF3C7" opacity="0.9" />
+
+  <!-- Ladoo 1 (Back Left) -->
+  <circle cx="180" cy="230" r="50" fill="url(#ladooGrad2)" filter="url(#ladooShadow)" />
+  <!-- Pistachio & Almond on Ladoo 1 -->
+  <ellipse cx="175" cy="205" rx="7" ry="3.5" fill="#15803D" transform="rotate(-20 175 205)" />
+  <ellipse cx="185" cy="208" rx="6" ry="3" fill="#FEF08A" transform="rotate(30 185 208)" />
+
+  <!-- Ladoo 2 (Back Right) -->
+  <circle cx="320" cy="230" r="50" fill="url(#ladooGrad2)" filter="url(#ladooShadow)" />
+  <ellipse cx="315" cy="205" rx="7" ry="3.5" fill="#15803D" transform="rotate(15 315 205)" />
+  <ellipse cx="325" cy="208" rx="6" ry="3" fill="#FEF08A" transform="rotate(-25 325 208)" />
+
+  <!-- Ladoo 3 (Center Top) -->
+  <circle cx="250" cy="200" r="52" fill="url(#ladooGrad1)" filter="url(#ladooShadow)" />
+  <ellipse cx="245" cy="175" rx="8" ry="4" fill="#15803D" transform="rotate(-10 245 175)" />
+  <ellipse cx="255" cy="178" rx="7" ry="3.5" fill="#FEF08A" transform="rotate(40 255 178)" />
+  <circle cx="240" cy="188" r="2.5" fill="#15803D" />
+
+  <!-- Ladoo 4 (Front Left) -->
+  <circle cx="205" cy="280" r="55" fill="url(#ladooGrad1)" filter="url(#ladooShadow)" />
+  <!-- Granular Roasted Texture Specks -->
+  <g fill="#78350F" opacity="0.3">
+    <circle cx="185" cy="265" r="2" />
+    <circle cx="195" cy="255" r="2" />
+    <circle cx="215" cy="275" r="2.5" />
+    <circle cx="200" cy="295" r="2" />
+    <circle cx="225" cy="265" r="2" />
+  </g>
+  <ellipse cx="200" cy="250" rx="9" ry="4" fill="#15803D" transform="rotate(-15 200 250)" />
+  <ellipse cx="212" cy="254" rx="8" ry="4" fill="#FEF3C7" transform="rotate(35 212 254)" />
+
+  <!-- Ladoo 5 (Front Right) -->
+  <circle cx="295" cy="280" r="55" fill="url(#ladooGrad1)" filter="url(#ladooShadow)" />
+  <g fill="#78350F" opacity="0.3">
+    <circle cx="275" cy="265" r="2" />
+    <circle cx="285" cy="255" r="2" />
+    <circle cx="305" cy="275" r="2.5" />
+    <circle cx="290" cy="295" r="2" />
+    <circle cx="315" cy="265" r="2" />
+  </g>
+  <ellipse cx="290" cy="250" rx="9" ry="4" fill="#15803D" transform="rotate(20 290 250)" />
+  <ellipse cx="302" cy="254" rx="8" ry="4" fill="#FEF3C7" transform="rotate(-30 302 254)" />
+
+  <!-- Ghee Luster Highlight -->
+  <ellipse cx="240" cy="190" rx="14" ry="7" fill="#FFFFFF" opacity="0.4" transform="rotate(-20 240 190)" />
+  <ellipse cx="195" cy="270" rx="14" ry="7" fill="#FFFFFF" opacity="0.35" transform="rotate(-20 195 270)" />
+  <ellipse cx="285" cy="270" rx="14" ry="7" fill="#FFFFFF" opacity="0.35" transform="rotate(-20 285 270)" />
+
+  <!-- Label Badge -->
+  <rect x="135" y="420" width="230" height="34" rx="17" fill="#78350F" />
+  <text x="250" y="442" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FEF3C7" text-anchor="middle" letter-spacing="1">HANDMADE BESAN LADOO</text>
+</svg>
+

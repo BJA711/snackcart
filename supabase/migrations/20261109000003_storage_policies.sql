@@ -47,3 +47,4 @@ CREATE POLICY "Admin delete product images"
         bucket_id = 'product-images'
         AND public.is_admin()
     );
+

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="100%" stop-color="#F5E8D3" />
+    </radialGradient>
+    <radialGradient id="khakhraGrad" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="65%" stop-color="#F59E0B" />
+      <stop offset="90%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </radialGradient>
+    <filter id="crispShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#78350F" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg)" />
+
+  <!-- Shadow below discs -->
+  <ellipse cx="250" cy="380" rx="190" ry="40" fill="#78350F" opacity="0.12" />
+
+  <!-- Back Khakhra Disc (Stacked) -->
+  <circle cx="270" cy="230" r="160" fill="#D97706" opacity="0.6" filter="url(#crispShadow)" />
+
+  <!-- Middle Khakhra Disc -->
+  <circle cx="235" cy="250" r="165" fill="#F59E0B" opacity="0.85" filter="url(#crispShadow)" />
+
+  <!-- Front Crisp Khakhra Disc -->
+  <circle cx="245" cy="260" r="165" fill="url(#khakhraGrad)" filter="url(#crispShadow)" stroke="#B45309" stroke-width="2" />
+
+  <!-- Roasted Toasted Texture Spots -->
+  <g fill="#92400E" opacity="0.65">
+    <ellipse cx="200" cy="210" rx="14" ry="8" transform="rotate(-15 200 210)" />
+    <ellipse cx="280" cy="230" rx="18" ry="10" transform="rotate(25 280 230)" />
+    <ellipse cx="180" cy="280" rx="12" ry="7" transform="rotate(10 180 280)" />
+    <ellipse cx="310" cy="290" rx="15" ry="9" transform="rotate(-30 310 290)" />
+    <ellipse cx="230" cy="320" rx="20" ry="10" transform="rotate(5 230 320)" />
+    <ellipse cx="260" cy="180" rx="10" ry="6" />
+    <ellipse cx="150" cy="240" rx="11" ry="6" transform="rotate(40 150 240)" />
+    <ellipse cx="340" cy="250" rx="13" ry="7" transform="rotate(-20 340 250)" />
+    <circle cx="220" cy="260" r="6" />
+    <circle cx="270" cy="270" r="7" />
+    <circle cx="170" cy="330" r="5" />
+    <circle cx="310" cy="340" r="8" />
+  </g>
+
+  <!-- Green Fenugreek (Methi) Dried Leaves -->
+  <g fill="#166534" opacity="0.85">
+    <!-- Small leaf flecks -->
+    <path d="M 190 230 C 195 225, 205 228, 200 235 C 195 240, 185 235, 190 230 Z" />
+    <path d="M 230 200 C 235 195, 245 198, 240 205 C 235 210, 225 205, 230 200 Z" />
+    <path d="M 290 250 C 295 245, 305 248, 300 255 C 295 260, 285 255, 290 250 Z" />
+    <path d="M 210 290 C 215 285, 225 288, 220 295 C 215 300, 205 295, 210 290 Z" />
+    <path d="M 270 310 C 275 305, 285 308, 280 315 C 275 320, 265 315, 270 310 Z" />
+    <path d="M 160 270 C 165 265, 175 268, 170 275 C 165 280, 155 275, 160 270 Z" />
+    <path d="M 330 280 C 335 275, 345 278, 340 285 C 335 290, 325 285, 330 280 Z" />
+    <path d="M 250 240 C 255 235, 265 238, 260 245 C 255 250, 245 245, 250 240 Z" />
+    <circle cx="180" cy="200" r="2.5" />
+    <circle cx="310" cy="210" r="3" />
+    <circle cx="225" cy="350" r="2.5" />
+    <circle cx="280" cy="360" r="3" />
+    <circle cx="140" cy="290" r="2" />
+  </g>
+
+  <!-- Turmeric spice sheen -->
+  <circle cx="220" cy="230" r="90" fill="#FBBF24" opacity="0.2" filter="blur(10px)" />
+
+  <!-- Label Badge -->
+  <rect x="140" y="420" width="220" height="34" rx="17" fill="#78350F" />
+  <text x="250" y="442" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FEF3C7" text-anchor="middle" letter-spacing="1">CRISPY METHI KHAKHRA</text>
+</svg>
+

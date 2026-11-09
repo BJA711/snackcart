@@ -164,3 +164,4 @@ Deployment manifests are organized in `openshift/`:
 - `service.yaml`: ClusterIP service on port 3000.
 - `route.yaml`: Edge TLS terminated OpenShift Route.
 - `configmap.yaml`: Production environment parameters.
+

@@ -22,3 +22,4 @@ export function AnnouncementBar() {
     </aside>
   );
 }
+

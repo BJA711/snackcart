@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 import { formatPaiseToRupees } from "@/lib/formatters";
@@ -60,19 +60,14 @@ export function CartItemList() {
           <div key={product_id} className="p-4 sm:p-6 flex gap-4 items-center">
             {/* Thumbnail */}
             <div className="relative w-20 h-20 bg-stone-100 rounded-md overflow-hidden shrink-0 border border-stone-200">
-              {product.image_url ? (
-                <Image
-                  src={product.image_url}
-                  alt={product.name}
-                  fill
-                  sizes="80px"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-stone-400">
-                  <ShoppingBag className="w-6 h-6" aria-hidden="true" />
-                </div>
-              )}
+              <SafeImage
+                src={product.image_url || "/images/products/fallback-snack.svg"}
+                alt={product.name}
+                fill
+                sizes="80px"
+                className="object-cover"
+                fallbackSrc="/images/products/fallback-snack.svg"
+              />
             </div>
 
             {/* Product details */}
@@ -139,3 +134,4 @@ export function CartItemList() {
     </div>
   );
 }
+

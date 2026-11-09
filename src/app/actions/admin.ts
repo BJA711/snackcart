@@ -312,3 +312,4 @@ export async function toggleCouponActive(couponId: string, isActive: boolean) {
   if (error) throw new Error(error.message);
   return data;
 }
+

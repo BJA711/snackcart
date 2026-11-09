@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import Link from "next/link";
 import { Product } from "@/types";
 import { formatPaiseToRupees } from "@/lib/formatters";
@@ -45,20 +45,15 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
       {/* Product Image Gallery / Display */}
       <div className="lg:col-span-6 space-y-4">
         <div className="relative aspect-square rounded-xl bg-stone-100 overflow-hidden border border-stone-200 shadow-sm">
-          {product.image_url ? (
-            <Image
-              src={product.image_url}
-              alt={product.name}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-stone-400">
-              <ShoppingBag className="w-16 h-16" aria-hidden="true" />
-            </div>
-          )}
+          <SafeImage
+            src={product.image_url || "/images/products/fallback-snack.svg"}
+            alt={product.name}
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+            fallbackSrc="/images/products/fallback-snack.svg"
+          />
 
           {product.is_featured && (
             <span className="absolute top-3 left-3 px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-brand-600 text-white rounded">
@@ -228,3 +223,4 @@ export function ProductDetailClient({ product }: ProductDetailClientProps) {
     </div>
   );
 }
+

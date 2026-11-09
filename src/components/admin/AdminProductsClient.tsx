@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import { Category, Product } from "@/types";
 import { createClient } from "@/lib/supabase/client";
 import { DEMO_CATEGORIES, DEMO_PRODUCTS } from "@/lib/demoData";
@@ -106,19 +106,14 @@ export function AdminProductsClient() {
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-3">
                       <div className="relative w-10 h-10 rounded bg-stone-100 overflow-hidden shrink-0 border border-stone-200">
-                        {p.image_url ? (
-                          <Image
-                            src={p.image_url}
-                            alt={p.name}
-                            fill
-                            sizes="40px"
-                            className="object-cover"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center text-stone-400">
-                            <ShoppingBag className="w-4 h-4" aria-hidden="true" />
-                          </div>
-                        )}
+                        <SafeImage
+                          src={p.image_url || "/images/products/fallback-snack.svg"}
+                          alt={p.name}
+                          fill
+                          sizes="40px"
+                          className="object-cover"
+                          fallbackSrc="/images/products/fallback-snack.svg"
+                        />
                       </div>
                       <div>
                         <strong className="font-semibold text-stone-900 block">

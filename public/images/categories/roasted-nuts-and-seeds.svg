@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="catNutsBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="100%" stop-color="#F2ECE4" />
+    </radialGradient>
+    <radialGradient id="nutMakhana" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#FEF9EE" />
+      <stop offset="90%" stop-color="#FDE68A" />
+      <stop offset="100%" stop-color="#D97706" />
+    </radialGradient>
+    <filter id="nutsSh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#78350F" flood-opacity="0.2" />
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#catNutsBg)" />
+
+  <!-- Shadow -->
+  <ellipse cx="300" cy="330" rx="190" ry="35" fill="#78350F" opacity="0.12" />
+
+  <!-- Modern Matte Black Serving Bowl -->
+  <path d="M 160 190 C 160 310, 440 310, 440 190 Z" fill="#292524" filter="url(#nutsSh)" />
+  <ellipse cx="300" cy="190" rx="140" ry="32" fill="#44403C" />
+  <ellipse cx="300" cy="190" rx="132" ry="28" fill="#1C1917" />
+
+  <!-- Roasted Makhana Foxnuts, Almonds, Pumpkin Seeds -->
+  <circle cx="240" cy="170" r="28" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="300" cy="160" r="30" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="360" cy="170" r="27" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+
+  <circle cx="215" cy="195" r="30" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="270" cy="185" r="32" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="330" cy="180" r="33" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="380" cy="200" r="28" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+
+  <circle cx="250" cy="215" r="32" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="310" cy="210" r="34" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+  <circle cx="365" cy="225" r="29" fill="url(#nutMakhana)" filter="url(#nutsSh)" />
+
+  <!-- Roasted Almonds -->
+  <ellipse cx="230" cy="220" rx="14" ry="7" fill="#92400E" transform="rotate(-30 230 220)" />
+  <ellipse cx="290" cy="200" rx="15" ry="8" fill="#B45309" transform="rotate(40 290 200)" />
+  <ellipse cx="340" cy="220" rx="13" ry="7" fill="#78350F" transform="rotate(-15 340 220)" />
+
+  <!-- Paprika seasoning dusting -->
+  <g fill="#DC2626" opacity="0.7">
+    <circle cx="270" cy="180" r="2.5" />
+    <circle cx="310" cy="205" r="2.5" />
+    <circle cx="250" cy="210" r="2.2" />
+    <circle cx="330" cy="175" r="2" />
+    <circle cx="365" cy="220" r="2.5" />
+  </g>
+
+  <!-- Collection Title -->
+  <rect x="170" y="340" width="260" height="32" rx="16" fill="#78350F" />
+  <text x="300" y="361" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FEF3C7" text-anchor="middle" letter-spacing="1">ROASTED NUTS &amp; SEEDS</text>
+</svg>
+

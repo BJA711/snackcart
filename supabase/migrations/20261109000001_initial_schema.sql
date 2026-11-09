@@ -179,3 +179,4 @@ CREATE TABLE IF NOT EXISTS public.store_settings (
     description TEXT,
     updated_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc', now())
 );
+

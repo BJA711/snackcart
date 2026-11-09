@@ -10,3 +10,4 @@ data:
   NEXT_TELEMETRY_DISABLED: "1"
   NEXT_PUBLIC_SITE_URL: "https://snackcart.apps.cluster.domain"
   NEXT_PUBLIC_SUPABASE_URL: "https://your-project.supabase.co"
+

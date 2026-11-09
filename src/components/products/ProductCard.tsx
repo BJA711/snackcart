@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import { Product } from "@/types";
 import { formatPaiseToRupees } from "@/lib/formatters";
 import { useCart } from "@/context/CartContext";
@@ -32,19 +32,14 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <article className="group bg-white rounded-lg border border-stone-200 overflow-hidden hover:shadow-md transition-shadow flex flex-col h-full">
       <Link href={`/products/${product.slug}`} className="relative aspect-square overflow-hidden bg-stone-100 block">
-        {product.image_url ? (
-          <Image
-            src={product.image_url}
-            alt={product.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-stone-400 bg-stone-100">
-            <ShoppingBag className="w-12 h-12 stroke-1" aria-hidden="true" />
-          </div>
-        )}
+        <SafeImage
+          src={product.image_url || "/images/products/fallback-snack.svg"}
+          alt={product.name}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          fallbackSrc="/images/products/fallback-snack.svg"
+        />
 
         {/* Stock / Featured Badges */}
         <div className="absolute top-2 left-2 flex flex-col gap-1">
@@ -126,3 +121,4 @@ export function ProductCard({ product }: ProductCardProps) {
     </article>
   );
 }
+

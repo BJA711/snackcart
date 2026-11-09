@@ -124,3 +124,4 @@ export const signupSchema = z.object({
   full_name: z.string().trim().min(2, "Full name must be at least 2 characters"),
   phone: z.string().trim().regex(phoneRegex, "Please enter a valid 10-digit Indian mobile number").optional().or(z.literal("")),
 });
+

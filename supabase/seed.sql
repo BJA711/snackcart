@@ -130,3 +130,4 @@ VALUES
     ('store_contact', '{"phone": "+91 98765 43210", "email": "contact@snackcart.local", "city": "Bengaluru, Karnataka"}', 'Public contact details for store orders and inquiries'),
     ('announcement_banner', '{"enabled": true, "message": "Freshly prepared batches shipped within 24 hours. Free delivery on orders above ₹500!"}', 'Top announcement bar text')
 ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value;
+

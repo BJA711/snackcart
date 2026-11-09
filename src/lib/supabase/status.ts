@@ -29,3 +29,4 @@ export function isSupabaseAdminConfigured(): boolean {
   }
   return isSupabaseConfigured();
 }
+

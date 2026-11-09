@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGond" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" />
+      <stop offset="100%" stop-color="#F2ECE4" />
+    </radialGradient>
+    <radialGradient id="gondLadooGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="40%" stop-color="#B45309" />
+      <stop offset="85%" stop-color="#78350F" />
+      <stop offset="100%" stop-color="#451A03" />
+    </radialGradient>
+    <filter id="gondShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#451A03" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="500" height="500" fill="url(#bgGond)" />
+
+  <!-- Shadow below plate -->
+  <ellipse cx="250" cy="360" rx="190" ry="40" fill="#451A03" opacity="0.15" />
+
+  <!-- Artisanal Clay / Ceramic Platter -->
+  <ellipse cx="250" cy="290" rx="180" ry="85" fill="#78716C" filter="url(#gondShadow)" />
+  <ellipse cx="250" cy="285" rx="170" ry="78" fill="#A8A29E" />
+  <ellipse cx="250" cy="280" rx="155" ry="70" fill="#F5F5F4" />
+
+  <!-- Ladoo 1 (Back Left) -->
+  <circle cx="180" cy="225" r="50" fill="url(#gondLadooGrad)" filter="url(#gondShadow)" />
+  <!-- Crunchy Cashew & Almond bits -->
+  <ellipse cx="170" cy="205" rx="8" ry="4" fill="#FEF3C7" transform="rotate(-15 170 205)" />
+  <circle cx="195" cy="215" r="4" fill="#FFFFFF" opacity="0.8" />
+
+  <!-- Ladoo 2 (Back Right) -->
+  <circle cx="320" cy="225" r="50" fill="url(#gondLadooGrad)" filter="url(#gondShadow)" />
+  <ellipse cx="325" cy="205" rx="8" ry="4" fill="#FEF3C7" transform="rotate(25 325 205)" />
+  <circle cx="305" cy="215" r="4" fill="#FFFFFF" opacity="0.8" />
+
+  <!-- Ladoo 3 (Center Top) -->
+  <circle cx="250" cy="195" r="52" fill="url(#gondLadooGrad)" filter="url(#gondShadow)" />
+  <ellipse cx="240" cy="170" rx="9" ry="4.5" fill="#FEF3C7" transform="rotate(-10 240 170)" />
+  <circle cx="260" cy="180" r="4.5" fill="#FFFFFF" opacity="0.85" />
+  <ellipse cx="255" cy="195" rx="7" ry="3.5" fill="#FEF3C7" transform="rotate(45 255 195)" />
+
+  <!-- Ladoo 4 (Front Left) -->
+  <circle cx="205" cy="275" r="56" fill="url(#gondLadooGrad)" filter="url(#gondShadow)" />
+  <!-- Gond (crisp fried crystal gum) bits & Nuts embedded -->
+  <g fill="#FEF3C7">
+    <ellipse cx="190" cy="250" rx="10" ry="5" transform="rotate(-20 190 250)" />
+    <ellipse cx="215" cy="265" rx="8" ry="4" transform="rotate(30 215 265)" />
+    <circle cx="200" cy="285" r="4" />
+    <ellipse cx="225" cy="280" rx="9" ry="4" transform="rotate(-15 225 280)" />
+    <circle cx="178" cy="275" r="3.5" />
+  </g>
+  <!-- Translucent Gond Crystals -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <rect x="185" y="260" width="6" height="6" transform="rotate(25 185 260)" />
+    <rect x="208" y="248" width="5" height="5" transform="rotate(45 208 248)" />
+    <rect x="195" y="295" width="5" height="5" transform="rotate(10 195 295)" />
+  </g>
+
+  <!-- Ladoo 5 (Front Right) -->
+  <circle cx="295" cy="275" r="56" fill="url(#gondLadooGrad)" filter="url(#gondShadow)" />
+  <g fill="#FEF3C7">
+    <ellipse cx="280" cy="250" rx="10" ry="5" transform="rotate(15 280 250)" />
+    <ellipse cx="310" cy="265" rx="8" ry="4" transform="rotate(-35 310 265)" />
+    <circle cx="290" cy="285" r="4" />
+    <ellipse cx="320" cy="280" rx="9" ry="4" transform="rotate(20 320 280)" />
+    <circle cx="275" cy="275" r="3.5" />
+  </g>
+  <g fill="#FFFFFF" opacity="0.85">
+    <rect x="282" y="262" width="6" height="6" transform="rotate(35 282 262)" />
+    <rect x="300" y="248" width="5" height="5" transform="rotate(15 300 248)" />
+    <rect x="308" y="295" width="5" height="5" transform="rotate(50 308 295)" />
+  </g>
+
+  <!-- Label Badge -->
+  <rect x="135" y="420" width="230" height="34" rx="17" fill="#451A03" />
+  <text x="250" y="442" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FEF3C7" text-anchor="middle" letter-spacing="1">DRY FRUIT GOND LADOO</text>
+</svg>
+
