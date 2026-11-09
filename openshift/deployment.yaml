@@ -22,7 +22,7 @@ spec:
           image: image-registry.openshift-image-registry.svc:5000/snackcart/snackcart-web:latest
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
               name: http
           envFrom:
             - configMapRef:
@@ -39,13 +39,13 @@ spec:
           livenessProbe:
             httpGet:
               path: /api/health
-              port: 3000
+              port: 8080
             initialDelaySeconds: 15
             periodSeconds: 20
           readinessProbe:
             httpGet:
               path: /api/health
-              port: 3000
+              port: 8080
             initialDelaySeconds: 5
             periodSeconds: 10
           securityContext:
@@ -54,4 +54,3 @@ spec:
             capabilities:
               drop:
                 - ALL
-

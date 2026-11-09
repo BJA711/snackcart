@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import { Category } from "@/types";
 import { createClient } from "@/lib/supabase/client";
 import { DEMO_CATEGORIES } from "@/lib/demoData";
@@ -71,19 +71,14 @@ export function AdminCategoriesClient() {
             className="bg-white rounded-lg border border-stone-200 p-5 shadow-sm flex items-start gap-4"
           >
             <div className="relative w-16 h-16 rounded-md bg-stone-100 overflow-hidden shrink-0 border border-stone-200">
-              {cat.image_url ? (
-                <Image
-                  src={cat.image_url}
-                  alt={cat.name}
-                  fill
-                  sizes="64px"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-stone-400">
-                  <UtensilsCrossed className="w-6 h-6" aria-hidden="true" />
-                </div>
-              )}
+              <SafeImage
+                src={cat.image_url || "/images/categories/traditional-namkeen.svg"}
+                alt={cat.name}
+                fill
+                sizes="64px"
+                className="object-cover"
+                fallbackSrc="/images/categories/traditional-namkeen.svg"
+              />
             </div>
 
             <div className="flex-grow min-w-0">

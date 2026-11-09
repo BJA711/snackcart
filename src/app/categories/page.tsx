@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import { getCategories } from "@/lib/data";
 import { ArrowRight, UtensilsCrossed } from "lucide-react";
 
@@ -32,19 +32,14 @@ export default async function CategoriesPage() {
             className="group bg-white rounded-xl border border-stone-200 overflow-hidden hover:border-brand-400 hover:shadow-lg transition-all flex flex-col sm:flex-row"
           >
             <div className="relative sm:w-2/5 aspect-[4/3] sm:aspect-auto bg-stone-100 overflow-hidden shrink-0">
-              {cat.image_url ? (
-                <Image
-                  src={cat.image_url}
-                  alt={cat.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 400px"
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-stone-400">
-                  <UtensilsCrossed className="w-12 h-12" aria-hidden="true" />
-                </div>
-              )}
+              <SafeImage
+                src={cat.image_url || "/images/categories/traditional-namkeen.svg"}
+                alt={cat.name}
+                fill
+                sizes="(max-width: 640px) 100vw, 400px"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                fallbackSrc="/images/categories/traditional-namkeen.svg"
+              />
             </div>
 
             <div className="p-6 flex flex-col justify-between flex-grow">

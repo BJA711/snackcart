@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { SafeImage } from "@/components/ui/SafeImage";
 import { getCategories, getProducts } from "@/lib/data";
 import { ProductCard } from "@/components/products/ProductCard";
 import {
@@ -77,13 +77,14 @@ export default async function HomePage() {
             {/* Hero Image Showcase */}
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[4/3] sm:aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-stone-100">
-                <Image
-                  src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=1000&q=85"
+                <SafeImage
+                  src="/images/products/methi-khakhra.svg"
                   alt="Traditional Indian crispy snacks and khakhra"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
+                  fallbackSrc="/images/products/fallback-snack.svg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 p-4 bg-white/95 backdrop-blur-sm rounded-lg border border-stone-200 shadow-sm text-xs">
@@ -128,19 +129,14 @@ export default async function HomePage() {
               className="group bg-white rounded-lg border border-stone-200 overflow-hidden hover:border-brand-300 hover:shadow-md transition-all flex flex-col"
             >
               <div className="relative aspect-[16/10] bg-stone-100 overflow-hidden">
-                {cat.image_url ? (
-                  <Image
-                    src={cat.image_url}
-                    alt={cat.name}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-stone-400">
-                    <UtensilsCrossed className="w-8 h-8" aria-hidden="true" />
-                  </div>
-                )}
+                <SafeImage
+                  src={cat.image_url || "/images/categories/traditional-namkeen.svg"}
+                  alt={cat.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  fallbackSrc="/images/categories/traditional-namkeen.svg"
+                />
               </div>
               <div className="p-4 flex flex-col flex-grow justify-between">
                 <div>

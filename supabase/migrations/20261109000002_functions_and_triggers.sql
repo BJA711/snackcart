@@ -8,6 +8,7 @@ CREATE OR REPLACE FUNCTION public.is_admin()
 RETURNS BOOLEAN
 LANGUAGE sql
 SECURITY DEFINER
+SET search_path = public, pg_temp
 STABLE
 AS $$
     SELECT EXISTS (
@@ -16,13 +17,17 @@ AS $$
     );
 $$;
 
+-- Revoke default public execution privileges and grant explicitly
+REVOKE EXECUTE ON FUNCTION public.is_admin FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.is_admin TO authenticated, anon;
+
 -- 2. AUTOMATIC PROFILE CREATION TRIGGER
 -- Creates a customer profile entry whenever a user signs up via Supabase Auth
 CREATE OR REPLACE FUNCTION public.handle_new_user()
 RETURNS TRIGGER
 LANGUAGE plpgsql
 SECURITY DEFINER
-SET search_path = public
+SET search_path = public, pg_temp
 AS $$
 BEGIN
     INSERT INTO public.profiles (id, full_name, phone, role)
@@ -51,6 +56,7 @@ CREATE OR REPLACE FUNCTION public.protect_profile_role()
 RETURNS TRIGGER
 LANGUAGE plpgsql
 SECURITY DEFINER
+SET search_path = public, pg_temp
 AS $$
 BEGIN
     IF NEW.role IS DISTINCT FROM OLD.role THEN
@@ -205,7 +211,7 @@ CREATE OR REPLACE FUNCTION public.process_cod_checkout(
 RETURNS JSONB
 LANGUAGE plpgsql
 SECURITY DEFINER
-SET search_path = public
+SET search_path = public, pg_temp
 AS $$
 DECLARE
     v_order_id UUID;
@@ -452,4 +458,9 @@ BEGIN
     );
 END;
 $$;
+
+-- Restrict execution to authenticated and anonymous visitors
+REVOKE EXECUTE ON FUNCTION public.process_cod_checkout FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.process_cod_checkout TO authenticated, anon;
+
 
